@@ -11,7 +11,7 @@ import { Component,Input, Output, EventEmitter } from '@angular/core'
                 <div>
                     <span>Location: {{event.location.address}}</span>
                 </div>
-                <button class="btn btn-primary" (click)="handleClickMe()">Click Me!</button>
+                <button class="btn btn-primary" (click)="handleClickMe()" >Click Me!</button>
         </div>
     `
 })
@@ -19,9 +19,15 @@ import { Component,Input, Output, EventEmitter } from '@angular/core'
 export class EventThumbnailComponent{
     @Input() event:any
 
+    someProperty:string='somethin here'
+
     @Output() eventClick = new EventEmitter();
 
     handleClickMe(){
         this.eventClick.emit('yassss')
+    }
+
+    logFoo(){
+        console.log('log foo');
     }
 }
