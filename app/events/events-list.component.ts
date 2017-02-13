@@ -9,8 +9,7 @@ import { Component } from "@angular/core"
         <div *ngFor="let event of events" class="col-md-5">
         <event-thumbnail [event]="event" (eventClick)="hanleEventClicked($event)" ></event-thumbnail>
         </div>
-    </div>
-    `]
+    </div>`
 })
 
 export class EventListComponent{
@@ -23,11 +22,6 @@ export class EventListComponent{
       time: '10:00 am',
       price: 599.99,
       imageUrl: '/app/assets/images/angularconnect-shield.png',
-      location: {
-        address: '1057 DT',
-        city: 'London',
-        country: 'England'
-      },
       sessions: [
         {
           id: 1,
