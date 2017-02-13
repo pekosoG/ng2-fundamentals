@@ -8,7 +8,7 @@ import { Component,Input, Output, EventEmitter } from '@angular/core'
                 <div>Date: {{event?.date}}</div>
                 <div>Time: {{event?.time}}</div>
                 <div>Price: \${{event?.price}}</div>
-                <div *ngIf="event?.location">
+                <div [hidden]="!event?.location">
                     <span>Location: {{event?.location.address}}</span>
                 </div>
                 <button class="btn btn-primary" (click)="handleClickMe()" >Click Me!</button>
