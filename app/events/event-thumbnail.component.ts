@@ -14,7 +14,7 @@ import { Component,Input, Output, EventEmitter } from '@angular/core'
                 </div>
                 <div>Price: \${{event?.price}}</div>
                 <div [hidden]="!event?.location">
-                    <span>Location: {{event?.location.address}}</span>
+                    <span>Location: {{event?.location?.address}}</span>
                 </div>
                 <button class="btn btn-primary" (click)="handleClickMe()" >Click Me!</button>
         </div>
