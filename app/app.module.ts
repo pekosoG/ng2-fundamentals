@@ -8,6 +8,7 @@ import {EventThumbnailComponent} from './events/event-thumbnail.component'
 import {NavBarComponent} from './nav/navbar.component'
 import {EventService} from './events/shared/event.service'
 import {EventDetailsComponent} from './events/events-details/event-details.component'
+import {CreateEventComponent} from './events/create-events.omponent'
 
 import { appRoutes } from './routes'
 
@@ -21,7 +22,8 @@ import { appRoutes } from './routes'
         EventListComponent, 
         EventThumbnailComponent, 
         NavBarComponent, 
-        EventDetailsComponent],
+        EventDetailsComponent,
+        CreateEventComponent],
     bootstrap:[EventsAppComponent],
     providers:[EventService]
 })

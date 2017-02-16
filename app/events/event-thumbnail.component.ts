@@ -16,7 +16,6 @@ import { Component,Input, Output, EventEmitter } from '@angular/core'
                 <div [hidden]="!event?.location">
                     <span>Location: {{event?.location?.address}}</span>
                 </div>
-                <button class="btn btn-primary" (click)="handleClickMe()" >Click Me!</button>
         </div>
     `,
     styles:[`
@@ -31,10 +30,6 @@ export class EventThumbnailComponent{
     someProperty:string='somethin here'
 
     @Output() eventClick = new EventEmitter();
-
-    handleClickMe(){
-        this.eventClick.emit('yassss')
-    }
 
     logFoo(){
         console.log('log foo');
