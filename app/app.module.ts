@@ -30,7 +30,16 @@ import { appRoutes } from './routes'
         CreateEventComponent,
         Error404Component],
     bootstrap:[EventsAppComponent],
-    providers:[EventService, EventRouteActivator]
+    providers:[
+        EventService,
+        EventRouteActivator,
+        {provide: 'canDeactivateCreateEvent', useValue: checkDirtyState}]
 })
 
 export class AppModule{}
+
+function checkDirtyState(component: CreateEventComponent){
+    if(component.isDirty)
+        return window.confirm('save first! Sure to leave?');
+    return true
+    }
