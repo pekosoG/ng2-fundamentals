@@ -11,6 +11,7 @@ import {EventDetailsComponent} from './events/events-details/event-details.compo
 import {CreateEventComponent} from './events/create-events.omponent'
 
 import {EventRouteActivator} from './events/events-details/event-route-activator.service'
+import {EventListResolver} from './events/events-list-resolver.service'
 
 import {Error404Component} from './errors/404.component'
 
@@ -33,6 +34,7 @@ import { appRoutes } from './routes'
     providers:[
         EventService,
         EventRouteActivator,
+        EventListResolver,
         {provide: 'canDeactivateCreateEvent', useValue: checkDirtyState}]
 })
 
